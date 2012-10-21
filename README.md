@@ -18,4 +18,5 @@
 * [Anagrams](https://github.com/timoncui/LeetCode/blob/master/Anagrams.cpp)
 
 ## Tree
+* [Binary Tree Inorder Traversal](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Inorder_Traversal.cpp)
 * [Balanced Binary Tree](https://github.com/timoncui/LeetCode/blob/master/Balanced_Binary_Tree.cpp)
