@@ -1,7 +1,7 @@
 /*
 Author: Timon Cui, timonbaby@163.com
 
-Title:
+Title: {{ Title }}
 
 Description:
 
