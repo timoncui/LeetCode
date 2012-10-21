@@ -1,13 +1,10 @@
 # Solutions for Leetcode Online Judge
 
 ## Linear Sweeping
-
 * [Jump Game](https://github.com/timoncui/LeetCode/blob/master/Jump_Game.cpp)
 * [Jump Game II](https://github.com/timoncui/LeetCode/blob/master/Jump_Game_II.cpp)
 
-
 ## DP
-
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
 * [Combination Sum](https://github.com/timoncui/LeetCode/blob/master/Combination_Sum.cpp)
 
@@ -19,3 +16,6 @@
 
 ## String
 * [Anagrams](https://github.com/timoncui/LeetCode/blob/master/Anagrams.cpp)
+
+## Tree
+* [Balanced Binary Tree](https://github.com/timoncui/LeetCode/blob/master/Balanced_Binary_Tree.cpp)
