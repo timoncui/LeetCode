@@ -4,6 +4,7 @@
 * [Jump Game](https://github.com/timoncui/LeetCode/blob/master/Jump_Game.cpp)
 * [Jump Game II](https://github.com/timoncui/LeetCode/blob/master/Jump_Game_II.cpp)
 * [Largest Rectangle In Histogram](https://github.com/timoncui/LeetCode/blob/master/Largest_Rectangle_In_Histogram.cpp)
+* [Remove Duplicates from Sorted Array](https://github.com/timoncui/LeetCode/blob/master/Remove_Duplicates_from_Sorted_Array.cpp)
 
 ## DP
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
