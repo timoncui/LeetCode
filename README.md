@@ -33,3 +33,6 @@
 
 ## Matrix
 * [Maximal Rectangle](https://github.com/timoncui/LeetCode/blob/master/Maximal_Rectangle.cpp)
+
+## Simulation
+* [Valid Sudoku](https://github.com/timoncui/LeetCode/blob/master/Valid_Sudoku.cpp)
