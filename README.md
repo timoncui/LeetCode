@@ -13,6 +13,7 @@
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
 * [Combination Sum](https://github.com/timoncui/LeetCode/blob/master/Combination_Sum.cpp)
 * [Pow X N](https://github.com/timoncui/LeetCode/blob/master/Pow_X_N.cpp)
+* [Valid Parentheses](https://github.com/timoncui/LeetCode/blob/master/Valid_Parentheses.cpp)
 
 ## Bit and Bytes
 * [Add Binary](https://github.com/timoncui/LeetCode/blob/master/Add_Binary.cpp)
