@@ -21,3 +21,6 @@
 ## Tree
 * [Binary Tree Inorder Traversal](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Inorder_Traversal.cpp)
 * [Balanced Binary Tree](https://github.com/timoncui/LeetCode/blob/master/Balanced_Binary_Tree.cpp)
+
+## Matrix
+* [Maximal Rectangle](https://github.com/timoncui/LeetCode/blob/master/Maximal_Rectangle.cpp)
