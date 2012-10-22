@@ -38,7 +38,7 @@ public:
             if (S.empty() || h > S.top().second) S.push(make_pair(pos, h));
         }
         while (!S.empty()) {
-            result = max(result , S.top().second * ((int)height.size() - S.top().first));
+            result = max(result, S.top().second * ((int)height.size() - S.top().first));
             S.pop();
         }
         return result;
