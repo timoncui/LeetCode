@@ -12,6 +12,7 @@
 
 ## Bit and Bytes
 * [Add Binary](https://github.com/timoncui/LeetCode/blob/master/Add_Binary.cpp)
+* [Plus One](https://github.com/timoncui/LeetCode/blob/master/Plus_One.cpp)
 
 ## Linked List
 * [Add Two Numbers](https://github.com/timoncui/LeetCode/blob/master/Add_Two_Numbers.cpp)
