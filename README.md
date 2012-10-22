@@ -24,6 +24,7 @@
 ## String
 * [Anagrams](https://github.com/timoncui/LeetCode/blob/master/Anagrams.cpp)
 * [ZigZag Conversion](https://github.com/timoncui/LeetCode/blob/master/ZigZag_Conversion.cpp)
+* [Valid Number](https://github.com/timoncui/LeetCode/blob/master/Valid_Number.cpp)
 
 ## Tree
 * [Binary Tree Inorder Traversal](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Inorder_Traversal.cpp)
