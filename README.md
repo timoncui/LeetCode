@@ -10,6 +10,7 @@
 * [Remove Duplicates from Sorted List II](https://github.com/timoncui/LeetCode/blob/master/Remove_Duplicates_from_Sorted_List_II.cpp)
 * [3Sum](https://github.com/timoncui/LeetCode/blob/master/3Sum.cpp)
 * [3Sum Closest](https://github.com/timoncui/LeetCode/blob/master/3Sum_Closest.cpp)
+* [4Sum](https://github.com/timoncui/LeetCode/blob/master/4Sum.cpp)
 
 ## DP
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
