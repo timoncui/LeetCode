@@ -12,7 +12,11 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
 Difficulty rating:
 
-Notes:
+Notes: 
+O(n^2), similar to the 3Sum problem.
+
+With large numbers as input, the code may overflow. Not handled here for simplicity.
+For example, when sum = INT_MAX and target = INT_MIN, sum - target will overflow.
 
 */
 
@@ -20,15 +24,18 @@ class Solution {
 public:
   int threeSumClosest(vector<int> &num, int target) {
     sort(num.begin(), num.end());
-    int closest_sum = INT_MAX;
-    for (int i = 0; i < num.size(); ++i) {
+    int closest_sum = 0, distance = -1;
+    for (int i = 0; i < num.size() - 2; ++i) {
       int L = i + 1, H = num.size() - 1;
       while (L < H) {
-	int sum = v[i] + v[L] + v[H];
+	int sum = num[i] + num[L] + num[H];
 	if (sum > target) H --;
 	else if (sum < target) L ++;
 	else return target;
-	if (abs(sum - target) < abs(closest_sum - target)) closest_sum = sum;
+	if (distance < 0 || abs(sum - target) < distance) {
+	  closest_sum = sum;
+	  distance = abs(sum - target);
+	}
       }
     }
     return closest_sum;
