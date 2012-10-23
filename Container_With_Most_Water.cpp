@@ -4,7 +4,11 @@ Author: Timon Cui, timonbaby@163.com
 Title: Container With Most Water
 
 Description:
-Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+Given n non-negative integers a1, a2, ..., an, 
+where each represents a point at coordinate (i, ai). 
+n vertical lines are drawn such that the two endpoints of line i is at (i, ai) 
+and (i, 0). Find two lines, which together with x-axis forms a container, 
+such that the container contains the most water.
 Note: You may not slant the container.
 
 Difficulty rating: Medium
@@ -14,7 +18,7 @@ Can use sweep from left to right.
 For current position, the only candidates to form a bigger bucket is 
 the increasing subsequence from the first element in the list until now. 
 So we only need to keep a list of increasing heights. 
-Worse case complexity O(n^2). (For example, for 1, 2, 3, 4, бн, n).
+Worse case complexity O(n^2). (For example, for 1, 2, 3, 4, ..., n).
 Timeout for height = [1, 2, ..., 10000].
 
 Alternatively, can sweep from top to bottom. For each height, 
