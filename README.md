@@ -3,20 +3,20 @@
 ## Array, List, and Linear Sweeping
 * [Jump Game](https://github.com/timoncui/LeetCode/blob/master/Jump_Game.cpp)
 * [Jump Game II](https://github.com/timoncui/LeetCode/blob/master/Jump_Game_II.cpp)
-* [Largest Rectangle In Histogram](https://github.com/timoncui/LeetCode/blob/master/Largest_Rectangle_In_Histogram.cpp)
+* [Largest Rectangle In Histogram](https://github.com/timoncui/LeetCode/blob/master/Largest_Rectangle_In_Histogram.cpp) `*`
 * [Remove Duplicates from Sorted Array](https://github.com/timoncui/LeetCode/blob/master/Remove_Duplicates_from_Sorted_Array.cpp)
 * [Remove Duplicates from Sorted Array II](https://github.com/timoncui/LeetCode/blob/master/Remove_Duplicates_from_Sorted_Array_II.cpp)
 * [Remove Duplicates from Sorted List](https://github.com/timoncui/LeetCode/blob/master/Remove_Duplicates_from_Sorted_List.cpp)
 * [Remove Duplicates from Sorted List II](https://github.com/timoncui/LeetCode/blob/master/Remove_Duplicates_from_Sorted_List_II.cpp)
-* [3Sum](https://github.com/timoncui/LeetCode/blob/master/3Sum.cpp)
-* [3Sum Closest](https://github.com/timoncui/LeetCode/blob/master/3Sum_Closest.cpp)
-* [4Sum](https://github.com/timoncui/LeetCode/blob/master/4Sum.cpp)
+* [3Sum](https://github.com/timoncui/LeetCode/blob/master/3Sum.cpp) `*`
+* [3Sum Closest](https://github.com/timoncui/LeetCode/blob/master/3Sum_Closest.cpp) `*`
+* [4Sum](https://github.com/timoncui/LeetCode/blob/master/4Sum.cpp) `**`
 
 ## DP
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
 * [Combination Sum](https://github.com/timoncui/LeetCode/blob/master/Combination_Sum.cpp)
 * [Pow X N](https://github.com/timoncui/LeetCode/blob/master/Pow_X_N.cpp)
-* [Valid Parentheses](https://github.com/timoncui/LeetCode/blob/master/Valid_Parentheses.cpp)
+* [Valid Parentheses](https://github.com/timoncui/LeetCode/blob/master/Valid_Parentheses.cpp) `*`
 
 ## Bit and Bytes
 * [Add Binary](https://github.com/timoncui/LeetCode/blob/master/Add_Binary.cpp)
@@ -31,12 +31,12 @@
 * [Valid Number](https://github.com/timoncui/LeetCode/blob/master/Valid_Number.cpp)
 
 ## Tree
-* [Binary Tree Inorder Traversal](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Inorder_Traversal.cpp)
-* [Balanced Binary Tree](https://github.com/timoncui/LeetCode/blob/master/Balanced_Binary_Tree.cpp)
+* [Binary Tree Inorder Traversal](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Inorder_Traversal.cpp) `*`
+* [Balanced Binary Tree](https://github.com/timoncui/LeetCode/blob/master/Balanced_Binary_Tree.cpp) `*`
 * [Validate Binary Search Tree](https://github.com/timoncui/LeetCode/blob/master/Validate_Binary_Search_Tree.cpp)
 
 ## Matrix
-* [Maximal Rectangle](https://github.com/timoncui/LeetCode/blob/master/Maximal_Rectangle.cpp)
+* [Maximal Rectangle](https://github.com/timoncui/LeetCode/blob/master/Maximal_Rectangle.cpp) `**`
 
 ## Simulation
 * [Valid Sudoku](https://github.com/timoncui/LeetCode/blob/master/Valid_Sudoku.cpp)
