@@ -14,23 +14,31 @@ Note: You may not slant the container.
 Difficulty rating: Medium
 
 Notes:
-Can use sweep from left to right.
+
+SolutionOn2:
+Use sweep from left to right.
 For current position, the only candidates to form a bigger bucket is 
 the increasing subsequence from the first element in the list until now. 
 So we only need to keep a list of increasing heights. 
 Worse case complexity O(n^2). (For example, for 1, 2, 3, 4, ..., n).
 Timeout for height = [1, 2, ..., 10000].
 
-Alternatively, can sweep from top to bottom. For each height, 
+SolutionOnlogn:
+Sweep from top to bottom. For each height, 
 we keep track of current possible min and max bin. Complexity O(nlogn).
 130 ms for 45 test cases in JudgeLarge.
 
-O(n) solution: Start two pointers L and R from leftmost and rightmost and
+Solution:
+O(n). Start two pointers L and R from leftmost and rightmost and
 move close to each other.
 Each time, we move the shorter one to the next heigher value,
 because this is the only way to increase capacity.
 If two values are equal, we need to move both L and R.
-100 ms for 45 test cases in JudgeLarge.
+90 ms for 45 test cases in JudgeLarge.
+
+SolutionOnSimple:
+One could simply L ++ if H[L] < H[R] and R -- otherwise.
+Slightly less efficient but the logic is simpler.
 */
 
 class Solution {
@@ -41,11 +49,24 @@ public:
             max_area = max(max_area, (R - L) * min(height[L], height[R]));
             if (height[L] < height[R]) {
                 int h = height[L];
-                while (height[L] <= h && L < R) L ++;
+                while (height[L] <= h) L ++;
             } else {
                 int h = height[R];
-                while (height[R] <= h && L < R) R --;
+                while (height[R] <= h) R --;
             }
+        }
+        return max_area;
+    }
+};
+
+class SolutionOnSimple {
+public:
+    int maxArea(vector<int> &height) {
+        int L = 0, R = height.size() - 1, max_area = 0;
+        while (L < R) {
+            max_area = max(max_area, (R - L) * min(height[L], height[R]));
+            if (height[L] < height[R]) L ++;
+	    else R --;
         }
         return max_area;
     }
