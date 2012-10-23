@@ -30,6 +30,7 @@
 * [Anagrams](https://github.com/timoncui/LeetCode/blob/master/Anagrams.cpp)
 * [ZigZag Conversion](https://github.com/timoncui/LeetCode/blob/master/ZigZag_Conversion.cpp)
 * [Valid Number](https://github.com/timoncui/LeetCode/blob/master/Valid_Number.cpp)
+* [Longest Palindromic Substring](https://github.com/timoncui/LeetCode/blob/master/Longest_Palindromic_Substring.cpp) `**` `DP`
 
 ## Tree
 * [Binary Tree Inorder Traversal](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Inorder_Traversal.cpp) `*`
