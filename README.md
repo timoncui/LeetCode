@@ -12,6 +12,7 @@
 * [3Sum Closest](https://github.com/timoncui/LeetCode/blob/master/3Sum_Closest.cpp) `*`
 * [4Sum](https://github.com/timoncui/LeetCode/blob/master/4Sum.cpp) `**`
 * [Container With Most Water](https://github.com/timoncui/LeetCode/blob/master/Container_With_Most_Water.cpp) `**`
+* [Longest Valid Parentheses](https://github.com/timoncui/LeetCode/blob/master/Longest_Valid_Parentheses.cpp) `**`
 
 ## DP
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
