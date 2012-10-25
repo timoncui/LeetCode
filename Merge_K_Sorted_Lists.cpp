@@ -9,7 +9,7 @@ Merge k sorted linked lists and return it as one sorted list. Analyze and descri
 Difficulty rating:
 
 Notes:
-O(nlogk) when k << n.
+O(nlogk) when k << n, the total number of nodes.
 
 80 ms for 129 test cases in JudgeLarge.
 */
@@ -25,18 +25,13 @@ O(nlogk) when k << n.
 
 class Solution {
 public:
-  static bool Compare(const ListNode *a, const ListNode *b) {
-    return a->val > b->val;
-  }
   ListNode *mergeKLists(vector<ListNode *> &lists) {
     ListNode *root = NULL, *tail = NULL;
-    vector<ListNode*> H;
-    for (int i = 0; i < lists.size(); ++i) if (lists[i]) H.push_back(lists[i]);
-    make_heap(H.begin(), H.end(), Compare);
-    while (H.size()) {
-      pop_heap(H.begin(), H.end(), Compare);
-      ListNode *n = H.back();
-      H.pop_back();
+    priority_queue<ListNode *, vector<ListNode *>, Compare> Q;
+    for (int i = 0; i < lists.size(); ++i) if (lists[i]) Q.push(lists[i]);
+    while (!Q.empty()) {
+      ListNode *n = Q.top();
+      Q.pop();
       if (tail) {
 	tail->next = n;
 	tail = n;
@@ -44,11 +39,12 @@ public:
 	root = n;
 	tail = n;
       }
-      if (n->next) {
-	H.push_back(n->next);
-	push_heap(H.begin(), H.end(), Compare);
-      }
+      if (n->next) Q.push(n->next);
     }
     return root;
   }
+private:
+  struct Compare {
+    bool operator()(const ListNode *a, const ListNode *b) { return a->val > b->val; }
+  };
 };
