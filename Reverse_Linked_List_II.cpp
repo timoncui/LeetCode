@@ -19,6 +19,9 @@ A small trick is to append a dummy node in front of the true head
 so that the special case when the range contains the true head
 doesn't need to be handled.
 
+Another way is to open a new list and append node i to:
+i in range ? before tail : after tail.
+
 */
 
 /**
