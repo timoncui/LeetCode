@@ -27,6 +27,9 @@
 ## Linked List
 * [Add Two Numbers](https://github.com/timoncui/LeetCode/blob/master/Add_Two_Numbers.cpp)
 
+## Sort
+* [Merge K Sorted Lists](https://github.com/timoncui/LeetCode/blob/master/Merge_K_Sorted_Lists.cpp) `*` `Heap`
+
 ## String
 * [Anagrams](https://github.com/timoncui/LeetCode/blob/master/Anagrams.cpp)
 * [ZigZag Conversion](https://github.com/timoncui/LeetCode/blob/master/ZigZag_Conversion.cpp)
