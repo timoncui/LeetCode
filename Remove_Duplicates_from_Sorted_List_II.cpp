@@ -22,10 +22,11 @@ Notes:
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
 class Solution {
 public:
     ListNode *deleteDuplicates(ListNode *head) {
-        ListNode *result = NULL, *write = NULL, *read = head;
+        ListNode *result = NULL, *tail = NULL, *read = head;
         while (read) {
             if (read->next && read->val == read->next->val) {
                 int val = read->val;
@@ -35,17 +36,22 @@ public:
                     read = read_next;
                 }
             } else {
-                if (write) {
-                    write->next = read;
-                    write = write->next;
-                } else {
-                    result = read;
-                    write = read;
-                }
-                read = read->next;
-                write->next = NULL;
+	        append(result, tail, read);
             }
         }
         return result;
+    }
+private:
+    static void append(ListNode *&head, ListNode *&tail, ListNode *&node, bool cut_off = true) {
+        if (node == NULL) return;
+	if (head == NULL) {
+	    head = node;
+	    tail = node;
+	} else {
+	    tail->next = node;
+	    tail = node;
+	}
+	node = node->next;
+	if (cut_off) tail->next = NULL;
     }
 };
