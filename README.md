@@ -14,6 +14,7 @@
 * [Container With Most Water](https://github.com/timoncui/LeetCode/blob/master/Container_With_Most_Water.cpp) `**`
 * [Longest Valid Parentheses](https://github.com/timoncui/LeetCode/blob/master/Longest_Valid_Parentheses.cpp) `**`
 * [Minimum Window Substring](https://github.com/timoncui/LeetCode/blob/master/Minimum_Window_Substring.cpp) `***` `DP`
+* [Partition List](https://github.com/timoncui/LeetCode/blob/master/Partition_List.cpp)
 
 ## DP
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
