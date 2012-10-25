@@ -48,3 +48,6 @@
 
 ## Simulation
 * [Valid Sudoku](https://github.com/timoncui/LeetCode/blob/master/Valid_Sudoku.cpp)
+
+## Combinatorics
+* [Next Permutation](https://github.com/timoncui/LeetCode/blob/master/Next_Permutation.cpp) `*`
