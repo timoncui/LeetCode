@@ -72,10 +72,6 @@ public:
     }
 };
 
-bool compare(const pair<int, int>& a, const pair<int, int>& b) {
-    return a.second > b.second;
-}
-
 class SolutionOnlogn {
 public:
     int maxArea(vector<int> &height) {
@@ -96,6 +92,10 @@ public:
             res = max(res, H[i].second * (ma - mi));
         }
         return res;
+    }
+private:
+    static bool compare(const pair<int, int>& a, const pair<int, int>& b) {
+        return a.second > b.second;
     }
 };
 
