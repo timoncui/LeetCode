@@ -35,6 +35,7 @@
 ## Sort
 * [Merge K Sorted Lists](https://github.com/timoncui/LeetCode/blob/master/Merge_K_Sorted_Lists.cpp) `*` `Heap`
 * [Merge Sorted Array](https://github.com/timoncui/LeetCode/blob/master/Merge_Sorted_Array.cpp)
+* [Sort Colors](https://github.com/timoncui/LeetCode/blob/master/Sort_Colors.cpp) `*`
 
 ## String
 * [Anagrams](https://github.com/timoncui/LeetCode/blob/master/Anagrams.cpp)
