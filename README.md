@@ -17,6 +17,7 @@
 * [Partition List](https://github.com/timoncui/LeetCode/blob/master/Partition_List.cpp)
 * [Remove Nth Node From End of List](https://github.com/timoncui/LeetCode/blob/master/Remove_Nth_Node_From_End_of_List.cpp)
 * [Reverse Linked List II](https://github.com/timoncui/LeetCode/blob/master/Reverse_Linked_List_II.cpp) `*`
+* [Reverse Nodes in k-Group](https://github.com/timoncui/LeetCode/blob/master/Reverse_Nodes_in_k-Group.cpp)
 
 ## DP
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
@@ -54,3 +55,6 @@
 
 ## Combinatorics
 * [Next Permutation](https://github.com/timoncui/LeetCode/blob/master/Next_Permutation.cpp) `*`
+
+## Divide and Conquer
+* [Scramble String](https://github.com/timoncui/LeetCode/blob/master/Scramble_String.cpp) `**`
