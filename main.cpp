@@ -6,6 +6,7 @@
 #include <map>
 #include <set>
 #include <queue>
+#include <deque>
 #include <algorithm>
 #include <cstdio>
 #include <cstdlib>
