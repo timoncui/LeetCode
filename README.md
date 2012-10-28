@@ -59,6 +59,7 @@
 
 ## Combinatorics
 * [Next Permutation](https://github.com/timoncui/LeetCode/blob/master/Next_Permutation.cpp) `*`
+* [Permutations](https://github.com/timoncui/LeetCode/blob/master/Permutations.cpp)
 
 ## Divide and Conquer, Binary Search
 * [Scramble String](https://github.com/timoncui/LeetCode/blob/master/Scramble_String.cpp) `**`
