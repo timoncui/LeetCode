@@ -55,24 +55,6 @@ int longestIncreasingSubsequence(const vector<int>& x) {
   return M.size();
 }
 
-int longestIncreasingSubsequence1(const vector<int>& x) {
-  vector<int> M(1, -1);
-  for (int i = 0; i < x.size(); ++i) {
-    for (int L = M.size() - 1; L >= 0; --L) {
-      if (L == 0 || x[i] > x[M[L]]) { // Can append                                                                                                                               
-        int new_L = L + 1;
-        if (new_L < M.size()) {
-          if (x[i] < x[M[new_L]]) M[new_L] = i;
-        } else {
-          M.push_back(i);
-        }
-        break;
-      }
-    }
-  }
-  return M.size() - 1;
-}
-
 int main() {
   int N;
   cin >> N;
