@@ -25,6 +25,7 @@
 * [Combination Sum](https://github.com/timoncui/LeetCode/blob/master/Combination_Sum.cpp)
 * [Pow X N](https://github.com/timoncui/LeetCode/blob/master/Pow_X_N.cpp)
 * [Valid Parentheses](https://github.com/timoncui/LeetCode/blob/master/Valid_Parentheses.cpp) `*`
+* [Edit Distance](https://github.com/timoncui/LeetCode/blob/master/Edit_Distance.cpp) `*`
 
 ## Bit and Bytes
 * [Add Binary](https://github.com/timoncui/LeetCode/blob/master/Add_Binary.cpp)
