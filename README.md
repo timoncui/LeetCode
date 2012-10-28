@@ -65,3 +65,6 @@
 
 ## Stack
 * [Simplify Path](https://github.com/timoncui/LeetCode/blob/master/Simplify_Path.cpp) `*`
+
+## Search
+* [Word Search](https://github.com/timoncui/LeetCode/blob/master/Word_Search.cpp) `**`
