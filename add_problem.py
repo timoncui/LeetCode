@@ -16,6 +16,13 @@ if __name__ == '__main__':
     name = args[0]
     in_file_name = 'template.txt'
     out_file_name = name.replace(' ', '_') + '.cpp'
+
+    readme_template = '* [{{ Title }}](https://github.com/timoncui/LeetCode/blob/master/{{ Out file name }})';
+    line = readme_template.replace('{{ Title }}', name)
+    line = line.replace('{{ Out file name }}', out_file_name)
+    print 'Line for README.md:'
+    print line    
+
     if os.path.exists(out_file_name):
         print out_file_name, 'already exists.'
         sys.exit(1)
@@ -27,8 +34,3 @@ if __name__ == '__main__':
             fo.write(s)
         print 'File', out_file_name, 'created.'
 
-    readme_template = '* [{{ Title }}](https://github.com/timoncui/LeetCode/blob/master/{{ Out file name }})';
-    line = readme_template.replace('{{ Title }}', name)
-    line = line.replace('{{ Out file name }}', out_file_name)
-    print 'Line for README.md:'
-    print line    
