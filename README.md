@@ -28,7 +28,6 @@
 * [Combination Sum](https://github.com/timoncui/LeetCode/blob/master/Combination_Sum.cpp)
 * [Pow X N](https://github.com/timoncui/LeetCode/blob/master/Pow_X_N.cpp)
 * [Valid Parentheses](https://github.com/timoncui/LeetCode/blob/master/Valid_Parentheses.cpp) `*`
-* [Edit Distance](https://github.com/timoncui/LeetCode/blob/master/Edit_Distance.cpp) `*`
 
 ## Bit and Bytes
 * [Add Binary](https://github.com/timoncui/LeetCode/blob/master/Add_Binary.cpp)
@@ -48,6 +47,8 @@
 * [Valid Number](https://github.com/timoncui/LeetCode/blob/master/Valid_Number.cpp)
 * [Longest Palindromic Substring](https://github.com/timoncui/LeetCode/blob/master/Longest_Palindromic_Substring.cpp) `**` `DP`
 * [Longest Increasing Subsequence](https://github.com/timoncui/LeetCode/blob/master/Longest_Increasing_Subsequence.cpp) `**` `DP`
+* [Longest Common Subsequence](https://github.com/timoncui/LeetCode/blob/master/Longest_Common_Subsequence.cpp) `*` `DP`
+* [Edit Distance](https://github.com/timoncui/LeetCode/blob/master/Edit_Distance.cpp) `*`
 
 ## Tree
 * [Binary Tree Inorder Traversal](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Inorder_Traversal.cpp) `*`
