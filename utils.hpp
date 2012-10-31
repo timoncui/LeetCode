@@ -11,7 +11,7 @@
 #include <cctype>
 #include <cmath>
 
-#define ARRARYSIZE(x) (sizeof(x) / sizeof(x[0]))
+#define ARRAYSIZE(x) (sizeof(x) / sizeof(x[0]))
 
 template<typename T> void print(T a) {
     std::cerr << a;

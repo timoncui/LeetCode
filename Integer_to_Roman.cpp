@@ -60,5 +60,5 @@ public:
 int main() {
   Solution s;
   int x[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 42, 92, 109, 388, 593, 999, 1020, 2012, 3999};
-  for (int i = 0; i < ARRARYSIZE(x); ++i) cout << "case " << i << ": " << x[i] << " = " << s.intToRoman(x[i]) << endl;
+  for (int i = 0; i < ARRAYSIZE(x); ++i) cout << "case " << i << ": " << x[i] << " = " << s.intToRoman(x[i]) << endl;
 }
