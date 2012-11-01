@@ -62,6 +62,7 @@
 
 ## Simulation
 * [Valid Sudoku](https://github.com/timoncui/LeetCode/blob/master/Valid_Sudoku.cpp)
+* [Count and Say](https://github.com/timoncui/LeetCode/blob/master/Count_and_Say.cpp)
 
 ## Combinatorics
 * [Next Permutation](https://github.com/timoncui/LeetCode/blob/master/Next_Permutation.cpp) `*`
