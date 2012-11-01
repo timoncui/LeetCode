@@ -1,3 +1,24 @@
+/*
+Author: Timon Cui, timonbaby@163.com
+
+Title: Rotate Array
+
+Description:
+Given a list, rotate the list to the right by k places, where k is non-negative.
+For example:
+Given 1->2->3->4->5->NULL and k = 2,
+return 4->5->1->2->3->NULL.
+
+Difficulty rating: Easy
+
+Source:
+http://www.cs.bell-labs.com/cm/cs/pearls/s02b.pdf
+http://basicalgos.blogspot.com/2012/04/40-rotate-array-in-place.html
+
+Notes:
+
+*/
+
 #include "utils.hpp"
 
 template <class T>
