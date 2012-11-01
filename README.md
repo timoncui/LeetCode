@@ -75,6 +75,7 @@
 * [Search in Rotated Sorted Array](https://github.com/timoncui/LeetCode/blob/master/Search_in_Rotated_Sorted_Array.cpp) `**`
 * [Search in Rotated Sorted Array II](https://github.com/timoncui/LeetCode/blob/master/Search_in_Rotated_Sorted_Array_II.cpp) `**`
 * [Insert Interval](https://github.com/timoncui/LeetCode/blob/master/Insert_Interval.cpp)
+* [Median of Two Sorted Arrays](https://github.com/timoncui/LeetCode/blob/master/Median_of_Two_Sorted_Arrays.cpp)
 
 ## Stack
 * [Simplify Path](https://github.com/timoncui/LeetCode/blob/master/Simplify_Path.cpp) `*`

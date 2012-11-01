@@ -10,6 +10,8 @@
 #include <cstdlib>
 #include <cctype>
 #include <cmath>
+#include <stack>
+#include <deque>
 
 #define ARRAYSIZE(x) (sizeof(x) / sizeof(x[0]))
 
