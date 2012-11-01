@@ -26,12 +26,15 @@ Notes:
 class Solution {
 public:
   TreeNode *sortedArrayToBST(vector<int> &num) {
-    if (num.size() == 0) return NULL;
-    int m = num.size() / 2;
-    TreeNode *root = new TreeNode(num[m]);
-    vector<int> left(num.begin(), num.begin() + m), right(num.begin() + m + 1, num.end());
-    root->left = sortedArrayToBST(left);
-    root->right = sortedArrayToBST(right);
+    return sortedArrayToBST(num, 0, num.size());
+  }
+private:
+  TreeNode *sortedArrayToBST(vector<int>& num, int from, int to) {
+    if (from == to) return NULL;
+    int mid = (from + to) / 2;
+    TreeNode *root = new TreeNode(num[mid]);
+    root->left = sortedArrayToBST(num, from, mid);
+    root->right = sortedArrayToBST(num, mid + 1, to);
     return root;
   }
 };
