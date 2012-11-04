@@ -58,6 +58,7 @@
 * [Validate Binary Search Tree](https://github.com/timoncui/LeetCode/blob/master/Validate_Binary_Search_Tree.cpp)
 * [Convert Sorted Array to Binary Search Tree](https://github.com/timoncui/LeetCode/blob/master/Convert_Sorted_Array_to_Binary_Search_Tree.cpp)
 * [Binary Tree Level Order Traversal](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Level_Order_Traversal.cpp) `*`
+* [Construct Binary Tree from Inorder and Postorder Traversal](https://github.com/timoncui/LeetCode/blob/master/Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal.cpp) `*`
 
 ## Matrix
 * [Maximal Rectangle](https://github.com/timoncui/LeetCode/blob/master/Maximal_Rectangle.cpp) `**`
