@@ -40,5 +40,6 @@ private:
     int left_nodes = in_root - in_begin;
     root->left = buildTree(inorder, in_begin, in_root, postorder, post_begin, post_begin + left_nodes);
     root->right = buildTree(inorder, in_root + 1, in_end, postorder, post_begin + left_nodes, post_end - 1);
+    return root;
   }
 };
