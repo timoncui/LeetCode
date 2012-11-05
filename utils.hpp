@@ -12,6 +12,7 @@
 #include <cmath>
 #include <stack>
 #include <deque>
+#include <bitset>
 
 #define ARRAYSIZE(x) (sizeof(x) / sizeof(x[0]))
 
