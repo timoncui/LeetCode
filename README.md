@@ -34,6 +34,7 @@
 ## Bit and Bytes
 * [Add Binary](https://github.com/timoncui/LeetCode/blob/master/Add_Binary.cpp)
 * [Plus One](https://github.com/timoncui/LeetCode/blob/master/Plus_One.cpp)
+* [Multiply Strings](https://github.com/timoncui/LeetCode/blob/master/Multiply_Strings.cpp)
 * [Gray Code](https://github.com/timoncui/LeetCode/blob/master/Gray_Code.cpp) `*`
 
 ## Linked List
