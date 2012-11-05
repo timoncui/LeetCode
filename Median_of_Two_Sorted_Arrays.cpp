@@ -63,13 +63,14 @@ using namespace std;
 class Solution {
 public:
   double findMedianSortedArrays(int A[], int m, int B[], int n) {
-    if ((m + n) % 2 == 1) return kth_element(A, m, B, n, (m + n) / 2, 0, m - 1);
-    else return (kth_element(A, m, B, n, (m + n) / 2, 0, m - 1) + kth_element(A, m, B, n, (m + n) / 2 - 1, 0, m - 1)) / 2;
+    int k = min(m, n) + (max(m, n) - min(m, n)) / 2; // equal to (m + n) / 2 but avoid overflow
+    if ((m + n) % 2 == 1) return kth_element(A, m, B, n, k, 0, m - 1);
+    else return (kth_element(A, m, B, n, k, 0, m - 1) + kth_element(A, m, B, n, k - 1, 0, m - 1)) / 2;
   }
 private:
   double kth_element(int *A, int m, int *B, int n, int k, int left, int right) {
     if (left > right) return kth_element(B, n, A, m, k, 0, n);
-    int i = (left + right) / 2, j = k - i;
+    int i = left + (right - left) / 2, j = k - i;
     if (j < 0) return kth_element(A, m, B, n, k, left, i - 1);
     if (j > n) return kth_element(A, m, B, n, k, i + 1, right);
     if ((j == n || A[i] <= B[j]) && (j == 0 || B[j - 1] <= A[i])) return A[i];
@@ -81,8 +82,9 @@ private:
 class SolutionNotSoSmartBinarySearch {
 public:
   double findMedianSortedArrays(int A[], int m, int B[], int n) {
-    if ((m + n) % 2 == 1) return kth_element(A, m, B, n, (m + n) / 2);
-    else return (kth_element(A, m, B, n, (m + n) / 2) + kth_element(A, m, B, n, (m + n) / 2 - 1)) / 2;
+    int k = min(m, n) + (max(m, n) - min(m, n)) / 2; // equal to (m + n) / 2 but avoid overflow
+    if ((m + n) % 2 == 1) return kth_element(A, m, B, n, k);
+    else return (kth_element(A, m, B, n, k) + kth_element(A, m, B, n, k - 1)) / 2;
   }
 private:
   double kth_element(int *A, int m, int *B, int n, int k) {
@@ -128,6 +130,11 @@ int main() {
     int A[] = {};
     int B[] = {2, 3};
     eq(5, s.findMedianSortedArrays(A, ARRAYSIZE(A), B, ARRAYSIZE(B)), 2.5);
+  }
+  {
+    int A[] = {2};
+    int B[] = {};
+    eq(6, s.findMedianSortedArrays(A, ARRAYSIZE(A), B, ARRAYSIZE(B)), 2.0);
   }
   return 0;
 }

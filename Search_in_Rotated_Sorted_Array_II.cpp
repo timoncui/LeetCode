@@ -24,7 +24,7 @@ public:
 private:
   bool search(int *A, int L, int R, int target) {
     while (L <= R) {
-      int M = (L + R) / 2;
+      int M = L + (R - L) / 2;
       if (A[M] == target) return true;
       if (A[M] > A[L]) { // Left part sorted
 	if (A[L] <= target && target <= A[M]) R = M - 1;

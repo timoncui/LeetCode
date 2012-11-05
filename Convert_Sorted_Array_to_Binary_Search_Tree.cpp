@@ -31,7 +31,7 @@ public:
 private:
   TreeNode *sortedArrayToBST(vector<int>& num, int from, int to) {
     if (from == to) return NULL;
-    int mid = (from + to) / 2;
+    int mid = from + (to - from) / 2;
     TreeNode *root = new TreeNode(num[mid]);
     root->left = sortedArrayToBST(num, from, mid);
     root->right = sortedArrayToBST(num, mid + 1, to);
