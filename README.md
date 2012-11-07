@@ -37,6 +37,7 @@
 * [Plus One](https://github.com/timoncui/LeetCode/blob/master/Plus_One.cpp)
 * [Multiply Strings](https://github.com/timoncui/LeetCode/blob/master/Multiply_Strings.cpp)
 * [Gray Code](https://github.com/timoncui/LeetCode/blob/master/Gray_Code.cpp) `*`
+* [Palindrome Number](https://github.com/timoncui/LeetCode/blob/master/Palindrome_Number.cpp)
 
 ## Linked List
 * [Add Two Numbers](https://github.com/timoncui/LeetCode/blob/master/Add_Two_Numbers.cpp)
