@@ -44,6 +44,17 @@ template<typename T> void eq(int n, T have, T need) {
         std::cerr << "." << std::endl;
     }
 }
+template<> void eq(int n, float have, float need) {
+    if (fabs(have - need) < 1e-5f) {
+        std::cerr << "Case " << n << " passed." << std::endl;
+    } else {
+        std::cerr << "Case " << n << " failed: expected ";
+        print(need);
+        std::cerr << " received ";
+        print(have);
+        std::cerr << "." << std::endl;
+    }
+}
 template<typename T> void eq(int n, std::vector<T> have, std::vector<T> need) {
     if(have.size() != need.size() ) {
         std::cerr << "Case " << n << " failed: returned " << have.size() << " elements; expected " << need.size() << " elements.";
