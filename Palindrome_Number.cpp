@@ -10,6 +10,7 @@ Do this without extra space.
 Difficulty rating: Easy
 
 Source:
+http://www.leetcode.com/2012/01/palindrome-number.html
 http://www.leetcode.com/onlinejudge
 
 Notes:
