@@ -56,6 +56,7 @@
 * [Longest Increasing Subsequence](https://github.com/timoncui/LeetCode/blob/master/Longest_Increasing_Subsequence.cpp) `**` `DP`
 * [Longest Common Subsequence](https://github.com/timoncui/LeetCode/blob/master/Longest_Common_Subsequence.cpp) `*` `DP`
 * [Edit Distance](https://github.com/timoncui/LeetCode/blob/master/Edit_Distance.cpp) `*`
+* [Regular Expression Matching](https://github.com/timoncui/LeetCode/blob/master/Regular_Expression_Matching.cpp)
 
 ## Tree
 * [Binary Tree Inorder Traversal](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Inorder_Traversal.cpp) `*`
