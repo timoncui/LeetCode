@@ -11,6 +11,8 @@ The overall run time complexity should be O(log (m+n)).
 Difficulty rating: Hard
 
 Source:
+http://www.leetcode.com/2011/03/median-of-two-sorted-arrays.html
+http://www.leetcode.com/2011/01/find-k-th-smallest-element-in-union-of.html
 http://www.leetcode.com/onlinejudge
 
 Notes:

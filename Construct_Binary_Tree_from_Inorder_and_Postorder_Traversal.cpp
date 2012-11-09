@@ -12,6 +12,7 @@ You may assume that duplicates do not exist in the tree.
 Difficulty rating: Median
 
 Source:
+http://www.leetcode.com/2011/04/construct-binary-tree-from-inorder-and-preorder-postorder-traversal.html
 http://www.leetcode.com/onlinejudge
 
 Notes:

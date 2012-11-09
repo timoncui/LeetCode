@@ -15,6 +15,9 @@ The solution set must not contain duplicate triplets.
 
 Difficulty rating: Medium
 
+Source:
+http://www.leetcode.com/2010/04/finding-all-unique-triplets-that-sums.html
+
 Notes:
 
 O(n^2). 280 ms for 311 test cases in JudgeLarge.

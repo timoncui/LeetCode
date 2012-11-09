@@ -12,6 +12,7 @@ return 4->5->1->2->3->NULL.
 Difficulty rating: Easy
 
 Source:
+http://www.leetcode.com/2010/04/rotating-array-in-place.html
 http://www.cs.bell-labs.com/cm/cs/pearls/s02b.pdf
 http://basicalgos.blogspot.com/2012/04/40-rotate-array-in-place.html
 

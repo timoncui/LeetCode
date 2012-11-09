@@ -12,12 +12,15 @@ You may assume no duplicate exists in the array.
 
 Difficulty rating: Medium
 
+Source:
+http://www.leetcode.com/2010/04/searching-element-in-rotated-array.html
+
 Notes:
 
 Small modification of binary search.
 Based on comparison of A[M] and A[L]:
-A[M] > A[L]: Left side sorted, in range [A[L], A[M]]
-A[M] < A[L]: Right side sorted, in rnage [A[M], A[R]]
+A[M] > A[L]: Range [L, M] sorted. If target in this range, R = M - 1, otherwise remove this range.
+A[M] < A[L]: Range [M, R] sorted. If target in this range, L = M + 1, otherwise remove this range.
 otherwise, have to search both part. (This won't happen if no duplicates are allowed.)
 
 */

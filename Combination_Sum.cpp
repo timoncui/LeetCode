@@ -17,6 +17,9 @@ A solution set is:
 
 Difficulty rating: Medium
 
+Source:
+http://www.leetcode.com/2010/09/print-all-combinations-of-number-as-sum.html
+
 Notes: Equivalent to the Coin Change Problem. 
 Assumption: Numbers in candidates are distinct.
 */

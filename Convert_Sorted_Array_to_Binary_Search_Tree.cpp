@@ -9,6 +9,7 @@ Given an array where elements are sorted in ascending order, convert it to a hei
 Difficulty rating:
 
 Source:
+http://www.leetcode.com/2010/11/convert-sorted-array-into-balanced.html
 http://www.leetcode.com/onlinejudge
 
 Notes:
