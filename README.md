@@ -30,6 +30,7 @@
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
 * [Combination Sum](https://github.com/timoncui/LeetCode/blob/master/Combination_Sum.cpp)
 * [Pow X N](https://github.com/timoncui/LeetCode/blob/master/Pow_X_N.cpp)
+* [Generate Parentheses](https://github.com/timoncui/LeetCode/blob/master/Generate_Parentheses.cpp)
 * [Valid Parentheses](https://github.com/timoncui/LeetCode/blob/master/Valid_Parentheses.cpp) `*`
 * [Nuts In An Oasis](https://github.com/timoncui/LeetCode/blob/master/Nuts_In_An_Oasis.cpp) `*`
 * [String Reduction](https://github.com/timoncui/LeetCode/blob/master/String_Reduction.cpp) `**`
