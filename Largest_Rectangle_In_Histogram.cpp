@@ -4,12 +4,15 @@ Author: Timon Cui, timonbaby@163.com
 Title: Largest Rectangle In Histogram
 
 Description:
-Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
+Given n non-negative integers representing 
+the histogram's bar height where the width of each bar is 1, 
+find the area of largest rectangle in the histogram.
 
-Difficulty rating:
+Difficulty rating: Medium
 
 Notes: O(n) time complexity. 80 ms for 94 tests in JudgeLarge.
 
+Use a stack to keep track of open problems.
 Reference: http://www.informatik.uni-ulm.de/acm/Locals/2003/html/judge.html
 */
 
