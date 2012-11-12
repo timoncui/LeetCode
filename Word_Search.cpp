@@ -30,8 +30,7 @@ Notes:
 class Solution {
 public:
     bool exist(vector<vector<char> >& B, string word) {
-        vector<vector<bool> > visited(B.size());
-        for (int i = 0; i < B.size(); ++i) visited[i] = vector<bool>(B[0].size(), false);
+        vector<vector<bool> > visited(B.size(), vector<bool>(B[0].size(), false));
         for (int i = 0; i < B.size(); ++i) {
             for (int j = 0; j < B[i].size(); ++j) {
                 if (DFS(B, visited, i, j, word)) return true;
