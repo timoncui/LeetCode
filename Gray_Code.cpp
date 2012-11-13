@@ -16,11 +16,10 @@ For example, given n = 2, return [0,1,3,2]. Its gray code sequence is:
 01 - 1
 11 - 3
 10 - 2
+
 Note:
 For a given n, a gray code sequence is not uniquely defined.
-
 For example, [0,2,3,1] is also a valid gray code sequence according to the above definition.
-
 For now, the judge is able to judge based on one instance of gray code sequence. Sorry about that.
 
 Difficulty rating: Hard
@@ -30,6 +29,69 @@ http://www.leetcode.com/onlinejudge
 http://en.wikipedia.org/wiki/Gray_code
 
 Notes:
+
+*/
+
+#include "utils.hpp"
+using namespace std;
+
+/*
+If we look at the k-th bit of the gray code sequence for 0, 1, 2, ... , the sequence goes like:
+k = 0:
+011001100..
+k = 1:
+001111000011110000...
+k = 2:
+0000111111110000000011111111...
+In general, it's 2^k 0s followed by 2^{k + 1} 1s followed by 2^{k + 1} 0s ...
+This means that the k-th bit for number n is:
+
+  n + 2^k
+ ---------- % 2
+  2^{k + 1}
+
+Visualize the logic below:
+
+       +-------+------+
+  ...  | k + 1 |  k   | ...
+       +-------+------+
+
+           ^      1
+           |
+           +    add 2^k
+
+ divide by 2^{k + 1} then % 2 is this bit
+
+So, G[k] = B[k] ^ B[k + 1], and BinaryToGray(n) =  (n >> 1) ^ n
+
+To revert the process, B[k] = G[k] ^ B[k + 1].
+We can solve from the largest k down to 0.
+But if we realize that B[k] = G[k] ^ G[k + 1] ^ G[k + 2] + ..,
+this can be solved more efficiently using a parallel prefix sum.
+
+References:
+Prefix sum: http://http.developer.nvidia.com/GPUGems3/gpugems3_ch39.html
+
+*/
+
+class Solution {
+public:
+  vector<int> grayCode(int n) {
+    vector<int> x(1 << n);
+    for (int i = 0; i < x.size(); ++i) x[i] = BinaryToGray(i);
+    return x;
+  }
+private:
+  unsigned int BinaryToGray(unsigned int x) { return (x >> 1) ^ x; }
+  unsigned int GrayToBinary(unsigned int x) {
+    for (int i = 1; i < 8 * sizeof(unsigned int); i <<= 1) x ^= (x >> i);
+    return x;
+  }
+};
+
+/*
+
+Alternate solution:
 
 Note that 1 bit gray code goes:
 0
@@ -79,45 +141,7 @@ SolutionOnlineJudge implements this in order to pass the tests.
 
 Complexity O(N) where N = 2^n. Amortized O(1) for each number generated.
 
-Alternatively, if we look at the k-th bit for the gray code, the sequence goes like:
-k = 0:
-0110011001100..
-k = 1:
-001111000011110000...
-k = 2:
-00001111111100000000...
-In general, it's 2^k 0 followed by 2^{k + 1} 1 followed by 2^{k + 1} 0 ...
-This means that the k-th bit for number n is
-(n + 2^k) / 2^{k + 1} % 2.
-
-Visualize the logic below:
-       +-------+------+
-  ...  | k + 1 |  k   | ...
-       +-------+------+
-
-           ^      1
-           |
-           +    add 2^k
-
- divide by 2^{k + 1} then % 2 is this bit
-
-The final result for the k-th bit is the XOR of the (k + 1)-th bit and the k-th bit.
-In conclusion, gray_code(n) =  (n >> 1) ^ n.
 */
-
-#include "utils.hpp"
-using namespace std;
-
-class Solution {
-public:
-  vector<int> grayCode(int n) {
-    vector<int> x(1 << n);
-    for (int i = 0; i < x.size(); ++i) {
-      x[i] = (i >> 1) ^ i;
-    }
-    return x;
-  }
-};
 
 class SolutionOnlineJudge {
 public:
@@ -130,6 +154,39 @@ public:
       }
     }
     return x;
+  }
+};
+
+/*
+This problm can also be solved using recursive method below.
+Not the most efficient one, but easy to derive.
+*/
+
+class Solution2 {
+public:
+  vector<int> grayCode(int n) {
+    vector<int> x(1 << n);
+    for (int i = 0; i < x.size(); ++i) {
+      x[i] = atoi(GC(i, 8 * sizeof(int)));
+    }
+    return x;
+  }
+private:
+  int atoi(string v) {
+    int x = 0;
+    for (int i = 0; i < v.size(); ++i) {
+      x = (x << 1) + v[i] - '0';
+    }
+    return x;
+  }
+  string GC(int n, int len) {
+    if (n == 0) return string(len, '0');
+    int p = 1, k = 0;
+    while (p <= n) {
+      p <<= 1;
+      k ++;
+    }
+    return string(len - k, '0') + "1" + GC((1 << k) - 1 - n, k - 1);
   }
 };
 
