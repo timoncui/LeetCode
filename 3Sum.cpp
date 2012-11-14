@@ -4,7 +4,9 @@ Author: Timon Cui, timonbaby@163.com
 Title: 3Sum
 
 Description:
-Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+
+Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? 
+Find all unique triplets in the array which gives the sum of zero.
 Elements in a triplet (a,b,c) must be in non-descending order. (ie, a ≤ b ≤ c)
 The solution set must not contain duplicate triplets.
     For example, given array S = {-1 0 1 2 -1 -4},
