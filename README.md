@@ -8,6 +8,7 @@
 * [Remove Duplicates from Sorted Array II](https://github.com/timoncui/LeetCode/blob/master/Remove_Duplicates_from_Sorted_Array_II.cpp)
 * [Remove Duplicates from Sorted List](https://github.com/timoncui/LeetCode/blob/master/Remove_Duplicates_from_Sorted_List.cpp)
 * [Remove Duplicates from Sorted List II](https://github.com/timoncui/LeetCode/blob/master/Remove_Duplicates_from_Sorted_List_II.cpp)
+* [2Sum](https://github.com/timoncui/LeetCode/blob/master/2Sum.cpp)
 * [3Sum](https://github.com/timoncui/LeetCode/blob/master/3Sum.cpp) `*`
 * [3Sum Closest](https://github.com/timoncui/LeetCode/blob/master/3Sum_Closest.cpp) `*`
 * [4Sum](https://github.com/timoncui/LeetCode/blob/master/4Sum.cpp) `**`
