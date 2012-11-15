@@ -35,11 +35,29 @@ template<typename T> void print(std::vector<T> a) {
     }
     std::cerr << "}" << std::endl;
 }
+template<typename T> void eq(T have, T need) {
+    if (have != need) {
+        std::cerr << "Expected ";
+        print(need);
+        std::cerr << " received ";
+        print(have);
+        std::cerr << "." << std::endl;
+    }
+}
 template<typename T> void eq(int n, T have, T need) {
     if (have == need) {
         std::cerr << "Case " << n << " passed." << std::endl;
     } else {
         std::cerr << "Case " << n << " failed: expected ";
+        print(need);
+        std::cerr << " received ";
+        print(have);
+        std::cerr << "." << std::endl;
+    }
+}
+template<> void eq(float have, float need) {
+    if (fabs(have - need) >= 1e-5f) {
+        std::cerr << "Expected ";
         print(need);
         std::cerr << " received ";
         print(have);

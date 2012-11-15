@@ -47,4 +47,100 @@ int main() {
     eq(4, min_max(x.begin(), x.end(), y.begin(), y.end(), 0), 11);
   }
   }
+  
+  { // For SparseMat
+    using jcui::algorithm::SparseMat;
+    {
+      SparseMat<int> a(100, 100), b(100, 100);
+      SparseMat<int> c = SparseMat<int>::mul(a, b);
+      eq(c.get(3, 10), 0);
+      eq(c.get(0, 0), 0);
+    }
+    {
+      // a = [1, 2; 3, 0], b = [6, 0, 0; 0, 1, 4], a * b = [6, 2, 8; 18, 0, 0]
+      SparseMat<int> a(100, 100), b(100, 100);
+      a.set(0, 0, 1);
+      a.set(0, 1, 2);
+      a.set(1, 0, 3);
+      b.set(0, 0, 6);
+      b.set(1, 1, 1);
+      b.set(1, 2, 4);
+      SparseMat<int> c = SparseMat<int>::mul(a, b);
+      eq(c.get(0, 0), 6);
+      eq(c.get(0, 1), 2);
+      eq(c.get(0, 2), 8);
+      eq(c.get(1, 0), 18);
+      eq(c.get(1, 1), 0);
+      eq(c.get(1, 2), 0);
+    }
+    {
+      // a = [1, 2; 3, 0]
+      SparseMat<long> a(100, 100);
+      a.set(0, 0, 1);
+      a.set(0, 1, 2);
+      a.set(1, 0, 3);
+      SparseMat<long> c = SparseMat<long>::pow(a, 17);
+      eq(c.get(0, 0), 77431669L);
+      eq(c.get(0, 1), 51708494L);
+      eq(c.get(1, 0), 77562741L);
+      eq(c.get(1, 1), 51577422L);
+    }
+    {
+      // a = [1, 2; 3, 0]
+      int N = 10;
+      SparseMat<float> a(N, N);
+      for (int i = 0; i < N; ++i) {
+	a.set(i, i, 0.9f);
+	a.set(i, (i + 1) % N, 0.05f);
+	a.set(i, (i + N - 1) % N, 0.05f);
+      }
+      SparseMat<float> c = SparseMat<float>::pow(a, 20000);
+      for (int i = 0; i < N; ++i) {
+	for (int j = 0; j < N; ++j) {
+	  eq(fabs(c.get(i, j) - 0.1f) < 1e-3f, true);
+	}
+      }
+    }
+    {
+      // a = [1, 2; 3, 0]
+      SparseMat<long> a(2, 2);
+      a.set(0, 0, 1);
+      a.set(0, 1, 2);
+      a.set(1, 0, 3);
+      long xa[] = {4, 5};
+      vector<long> x(xa, xa + ARRAYSIZE(xa));
+      vector<long> y = SparseMat<long>::mul(a, x);
+      eq(y[0], 14L);
+      eq(y[1], 12L);
+    }
+    {
+      // a = [1, 2, 1; 3, 3, 0]
+      SparseMat<int> a(2, 3);
+      a.set(0, 0, 1);
+      a.set(0, 1, 2);
+      a.set(0, 2, 1);
+      a.set(1, 0, 3);
+      a.set(1, 1, 3);
+      vector<int> y = SparseMat<int>::row_sum(a);
+      eq(y[0], 4);
+      eq(y[1], 5);
+      eq(y[2], 1);
+    }
+    {
+      // a = [1, 2, 1; 3, 3, 0]
+      SparseMat<float> a(2, 3);
+      a.set(0, 0, 1);
+      a.set(0, 1, 2);
+      a.set(0, 2, 1);
+      a.set(1, 0, 3);
+      a.set(1, 1, 3);
+      a.normalize_by_row_sum();
+      eq(a.get(0, 0), 0.25f);
+      eq(a.get(0, 1), 0.4f);
+      eq(a.get(0, 2), 1.0f);
+      eq(a.get(1, 0), 0.75f);
+      eq(a.get(1, 1), 0.6f);
+      eq(a.get(1, 2), 0.0f);
+    }
+  }
 }
