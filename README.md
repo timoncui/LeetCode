@@ -35,6 +35,7 @@
 * [Valid Parentheses](https://github.com/timoncui/LeetCode/blob/master/Valid_Parentheses.cpp) `*`
 * [Nuts In An Oasis](https://github.com/timoncui/LeetCode/blob/master/Nuts_In_An_Oasis.cpp) `*`
 * [String Reduction](https://github.com/timoncui/LeetCode/blob/master/String_Reduction.cpp) `**`
+* [Egg Testing](https://github.com/timoncui/LeetCode/blob/master/Egg_Testing.cpp) `*`
 
 ## Bit and Bytes
 * [Add Binary](https://github.com/timoncui/LeetCode/blob/master/Add_Binary.cpp)

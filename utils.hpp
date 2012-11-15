@@ -13,6 +13,7 @@
 #include <stack>
 #include <deque>
 #include <bitset>
+#include <functional>
 #include "limits.h"
 
 #define ARRAYSIZE(x) (sizeof(x) / sizeof(x[0]))
