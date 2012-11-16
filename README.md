@@ -75,6 +75,7 @@
 * [Convert Sorted List to Binary Search Tree](https://github.com/timoncui/LeetCode/blob/master/Convert_Sorted_List_to_Binary_Search_Tree.cpp) `*`
 * [Binary Tree Maximum Path Sum](https://github.com/timoncui/LeetCode/blob/master/Binary_Tree_Maximum_Path_Sum.cpp) `*` `DP`
 * [Maximum Depth of Binary Tree](https://github.com/timoncui/LeetCode/blob/master/Maximum_Depth_of_Binary_Tree.cpp)
+* [Minimum Depth of Binary Tree](https://github.com/timoncui/LeetCode/blob/master/Minimum_Depth_of_Binary_Tree.cpp)
 
 ## Matrix
 * [Maximal Rectangle](https://github.com/timoncui/LeetCode/blob/master/Maximal_Rectangle.cpp) `**`
