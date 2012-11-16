@@ -134,5 +134,29 @@ public:
   std::vector<std::set<int> > row_ids, col_ids;
 };
 
+template<class T>
+class RingBuffer {
+public:
+  RingBuffer(int N) : cur(0), size(0) { v.resize(N); } // N > 0
+  void push_back(const T& val) {
+    v[cur] = val;
+    cur ++;
+    if (cur >= v.size()) cur = 0;
+    if (size < v.size()) size ++;
+  }
+  // Get value from last_write_position + offset
+  T get(int offset, T default_val = 0) const {
+    if (offset > 0 || offset <= -size) return default_val; // Cannot read future info, or info that got flushed
+    int index = cur - 1 + offset;
+    if (index < 0) index += size;
+    return v[index];
+  }     
+  int N() const { return size; }
+private:
+  int cur;
+  int size;
+  std::vector<T> v;
+};
+
 } // namespace algorithm
 } // namespace jcui

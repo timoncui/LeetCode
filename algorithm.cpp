@@ -143,4 +143,32 @@ int main() {
       eq(a.get(1, 2), 0.0f);
     }
   }
+  {
+    using jcui::algorithm::RingBuffer;
+    {
+      RingBuffer<int> R(3);
+
+      R.push_back(3);
+      eq(R.get(0), 3);
+      eq(R.get(-10), 0);
+      eq(R.get(10), 0);
+      eq(R.get(3), 0);
+      
+      R.push_back(2);
+      eq(R.get(-1), 3);
+      eq(R.get(0), 2);
+
+      R.push_back(1);
+      eq(R.get(-2), 3);
+      eq(R.get(-1), 2);
+      eq(R.get(0), 1);
+
+      R.push_back(7);
+      eq(R.get(-2), 2);
+      eq(R.get(-1), 1);
+      eq(R.get(0), 7);
+      eq(R.get(-3), 0);
+      eq(R.get(3), 0);
+    }
+  }
 }
