@@ -29,6 +29,7 @@
 
 ## DP
 * [Climbing Stairs](https://github.com/timoncui/LeetCode/blob/master/Climbing_Stairs.cpp)
+* [Decode Ways](https://github.com/timoncui/LeetCode/blob/master/Decode_Ways.cpp)
 * [Combination Sum](https://github.com/timoncui/LeetCode/blob/master/Combination_Sum.cpp)
 * [Pow X N](https://github.com/timoncui/LeetCode/blob/master/Pow_X_N.cpp)
 * [Generate Parentheses](https://github.com/timoncui/LeetCode/blob/master/Generate_Parentheses.cpp)
