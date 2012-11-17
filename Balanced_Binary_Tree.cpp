@@ -5,11 +5,13 @@ Title: Balanced Binary Tree
 
 Description:
 Given a binary tree, determine if it is height-balanced.
-For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+For this problem, a height-balanced binary tree is defined as a binary tree 
+in which the depth of the two subtrees of every node never differ by more than 1.
 
 Difficulty rating: Medium
 
-Notes: The trick is to orchestrate the order of traversal properly so that no node is visited more than once, maintaining O(n) complexity.
+Notes: The trick is to orchestrate the order of traversal properly so that 
+no node is visited more than once, maintaining O(n) complexity.
 
 */
 
@@ -24,6 +26,11 @@ Notes: The trick is to orchestrate the order of traversal properly so that no no
  */
 class Solution {
 public:
+  bool isBalanced(TreeNode *root) {
+    int depth;
+    return isBalancedWithDepth(root, depth);
+  }
+private:
   bool isBalancedWithDepth(TreeNode *root, int& depth) {
     if (!root) {
       depth = 0;
@@ -35,9 +42,5 @@ public:
     res &= isBalancedWithDepth(root->right, depth_r);
     depth = max(depth_l, depth_r) + 1;
     return res && (abs(depth_l - depth_r) <= 1);
-  }
-  bool isBalanced(TreeNode *root) {
-    int depth;
-    return isBalancedWithDepth(root, depth);
   }
 };
