@@ -47,6 +47,77 @@ T min_max(ForwardIterator1 inc_begin,
 }
 
 template<class T>
+T pow(const T& x, int k) {
+  if (k <= 1) return x;
+  T y = pow(x, k / 2);
+  y = T::mul(y, y);
+  if (k % 2) y = T::mul(y, x);
+  return y;
+}
+  
+template<class T>
+class Mat {
+public:
+  Mat(int H, int W) {
+    v.resize(H);
+    for (int i = 0; i < H; ++i) v[i].resize(W);
+  }
+  int H() const { return v.size(); }
+  int W() const { return v.size() ? v[0].size() : 0; }  
+  void set(int i, int j, T val) { if (valid(i, j)) v[i][j] = val; }
+  T get(int i, int j) const { return valid(i, j) ? v[i][j] : 0; }
+  void normalize_by_row_sum() {
+    std::vector<T> s = Mat<T>::row_sum(*this);
+    for (int i = 0; i < H(); ++i) {
+      for (int j = 0; j < W(); ++j) {
+	v[i][j] /= s[j];
+      }
+    }
+  }
+  static std::vector<T> row_sum(const Mat& A) {
+    std::vector<T> y(A.W(), 0);
+    for (int j = 0; j < A.W(); ++j) {
+      for (int i = 0; i < A.H(); ++i) {
+	y[j] += A.v[i][j];
+      }
+    }
+    return y;
+  }
+  static Mat mul(const Mat& x, const Mat& y) {
+    Mat p(x.H(), y.W());
+    for (int i = 0; i < x.H(); ++i) {
+      for (int j = 0; j < y.W(); ++j) {
+	T v = 0;
+	for (int k = 0; k < x.W(); ++k) {
+	  v += x.v[i][k] * y.v[k][j];
+	}
+	p.v[i][j] = v;
+      }      
+    }
+    return p;
+  }
+  static std::vector<T> mul(const Mat& A, const std::vector<T>& x) {
+    std::vector<T> y(A.H(), 0);
+    for (int i = 0; i < A.H(); ++i) {
+      for (int j = 0; j < A.W(); ++j) {
+	y[i] += A.v[i][j] * x[j];
+      }
+    }
+    return y;
+  }
+  inline bool valid(int i, int j) const { return i >= 0 && i < H() && j >= 0 && j < W(); }
+  void print() const {
+    for (int i = 0; i < H(); ++i) {
+      for (int j = 0; j < W(); ++j) {
+	std::cout << v[i][j] << " ";
+      }
+      std::cout << std::endl;
+    }
+  }
+  std::vector<std::vector<T> > v;
+};
+
+template<class T>
 class SparseMat {
 public:
   typedef typename std::map<std::pair<int, int>, T>::const_iterator MapConstIter;
@@ -116,13 +187,6 @@ public:
       }
     }
     return p;
-  }
-  static SparseMat pow(const SparseMat& x, int k) {
-    if (k <= 1) return x;
-    SparseMat y = pow(x, k / 2);
-    y = mul(y, y);
-    if (k % 2) y = mul(y, x);
-    return y;
   }
   void print() const {
     for (MapConstIter i = v.begin(); i != v.end(); ++i) {
