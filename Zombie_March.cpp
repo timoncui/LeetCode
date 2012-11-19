@@ -45,9 +45,10 @@ Notes:
 #include "utils.hpp"
 #include "algorithm.hpp"
 using jcui::algorithm::SparseMat;
+using jcui::algorithm::SparseMatCSR;
 using namespace std;
 
-vector<float> March(const SparseMat<float>& G, const vector<float>& x, int k) {
+vector<float> March(const SparseMatCSR<float>& G, const vector<float>& x, int k) {
   int p = 1;
   bool steady = false;
   vector<float> y = G * x;
@@ -82,7 +83,7 @@ int main() {
     G.normalize_by_row_sum();
     vector<float> x(N);
     for (int i = 0; i < N; ++i) cin >> x[i];
-    x = March(G, x, k);
+    x = March(SparseMatCSR<float>(G), x, k);
     int output = min(5, N);
     partial_sort(x.begin(), x.begin() + output, x.end(), greater<float>());
     for (int i = 0; i < output; ++i) {
