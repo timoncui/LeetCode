@@ -109,7 +109,7 @@ int main() {
       a.set(1, 0, 3);
       long xa[] = {4, 5};
       vector<long> x(xa, xa + ARRAYSIZE(xa));
-      vector<long> y = SparseMat<long>::mul(a, x);
+      vector<long> y = a * x;
       eq(y[0], 14L);
       eq(y[1], 12L);
     }
@@ -210,7 +210,7 @@ int main() {
       a.set(1, 0, 3);
       long xa[] = {4, 5};
       vector<long> x(xa, xa + ARRAYSIZE(xa));
-      vector<long> y = Mat<long>::mul(a, x);
+      vector<long> y = a * x;
       eq(y[0], 14L);
       eq(y[1], 12L);
     }

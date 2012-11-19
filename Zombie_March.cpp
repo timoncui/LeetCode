@@ -48,14 +48,12 @@ using jcui::algorithm::SparseMat;
 using namespace std;
 
 vector<float> March(const SparseMat<float>& G, const vector<float>& x, int k) {
-  int p = min(k, 16);
-  SparseMat<float> A = pow(G, p);
+  int p = 1;
   bool steady = false;
-  vector<float> y = SparseMat<float>::mul(A, x);
+  vector<float> y = G * x;
   while (p < k && !steady) {
-    A = SparseMat<float>::mul(A, G);
     p ++;
-    vector<float> new_y = SparseMat<float>::mul(A, x);
+    vector<float> new_y = G * y;
     steady = true;
     for (int i = 0; i < y.size(); ++i) {
       if (fabs(y[i] - new_y[i]) > 1e-3f) {

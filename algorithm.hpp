@@ -96,11 +96,11 @@ public:
     }
     return p;
   }
-  static std::vector<T> mul(const Mat& A, const std::vector<T>& x) {
-    std::vector<T> y(A.H(), 0);
-    for (int i = 0; i < A.H(); ++i) {
-      for (int j = 0; j < A.W(); ++j) {
-	y[i] += A.v[i][j] * x[j];
+  std::vector<T> operator*(const std::vector<T>& x) const {
+    std::vector<T> y(H(), 0);
+    for (int i = 0; i < H(); ++i) {
+      for (int j = 0; j < W(); ++j) {
+	y[i] += v[i][j] * x[j];
       }
     }
     return y;
@@ -159,11 +159,11 @@ public:
     }
     return y;
   }
-  static std::vector<T> mul(const SparseMat& A, const std::vector<T>& x) {
-    std::vector<T> y(A.H(), 0);
-    for (SetIter r = A.rows.begin(); r != A.rows.end(); ++r) {
-      for (SetIter k = A.col_ids[*r].begin(); k != A.col_ids[*r].end(); ++k) {
-	y[*r] += A.v.find(std::make_pair(*r, *k))->second * x[*k];
+  std::vector<T> operator*(const std::vector<T>& x) const {
+    std::vector<T> y(H(), 0);
+    for (SetIter r = rows.begin(); r != rows.end(); ++r) {
+      for (SetIter k = col_ids[*r].begin(); k != col_ids[*r].end(); ++k) {
+	y[*r] += v.find(std::make_pair(*r, *k))->second * x[*k];
       }
     }
     return y;
