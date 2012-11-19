@@ -50,8 +50,8 @@ template<class T>
 T pow(const T& x, int k) {
   if (k <= 1) return x;
   T y = pow(x, k / 2);
-  y = T::mul(y, y);
-  if (k % 2) y = T::mul(y, x);
+  y = y * y;
+  if (k % 2) y = y * x;
   return y;
 }
   
@@ -83,15 +83,15 @@ public:
     }
     return y;
   }
-  static Mat mul(const Mat& x, const Mat& y) {
-    Mat p(x.H(), y.W());
-    for (int i = 0; i < x.H(); ++i) {
+  Mat operator*(const Mat& y) const {
+    Mat p(H(), y.W());
+    for (int i = 0; i < H(); ++i) {
       for (int j = 0; j < y.W(); ++j) {
-	T v = 0;
-	for (int k = 0; k < x.W(); ++k) {
-	  v += x.v[i][k] * y.v[k][j];
+	T s = 0;
+	for (int k = 0; k < W(); ++k) {
+	  s += v[i][k] * y.v[k][j];
 	}
-	p.v[i][j] = v;
+	p.v[i][j] = s;
       }      
     }
     return p;
@@ -168,22 +168,22 @@ public:
     }
     return y;
   }
-  static SparseMat mul(const SparseMat& x, const SparseMat& y) {
-    SparseMat p(x.H(), y.W());
-    std::vector<int> intersect(x.W());
+  SparseMat operator*(const SparseMat& y) const {
+    SparseMat p(H(), y.W());
+    std::vector<int> intersect(W());
     typedef std::vector<int>::iterator VecIter;
-    for (SetIter r = x.rows.begin(); r != x.rows.end(); ++r) {
+    for (SetIter r = rows.begin(); r != rows.end(); ++r) {
       for (SetIter c = y.cols.begin(); c != y.cols.end(); ++c) {
-	T v = 0;
-	VecIter intersect_end = set_intersection(x.col_ids[*r].begin(),
-						 x.col_ids[*r].end(),
+	T s = 0;
+	VecIter intersect_end = set_intersection(col_ids[*r].begin(),
+						 col_ids[*r].end(),
 						 y.row_ids[*c].begin(), 
 						 y.row_ids[*c].end(), 
 						 intersect.begin());
 	for (VecIter k = intersect.begin(); k != intersect_end; ++k) {
-	  v += x.v.find(std::make_pair(*r, *k))->second * y.v.find(std::make_pair(*k, *c))->second;
+	  s += v.find(std::make_pair(*r, *k))->second * y.v.find(std::make_pair(*k, *c))->second;
 	}
-	if (v != 0) p.set(*r, *c, v);
+	if (s != 0) p.set(*r, *c, s);
       }
     }
     return p;

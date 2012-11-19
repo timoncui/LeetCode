@@ -52,7 +52,7 @@ int main() {
     using jcui::algorithm::SparseMat;
     {
       SparseMat<int> a(100, 100), b(100, 100);
-      SparseMat<int> c = SparseMat<int>::mul(a, b);
+      SparseMat<int> c = a * b;
       eq(c.get(3, 10), 0);
       eq(c.get(0, 0), 0);
     }
@@ -65,7 +65,7 @@ int main() {
       b.set(0, 0, 6);
       b.set(1, 1, 1);
       b.set(1, 2, 4);
-      SparseMat<int> c = SparseMat<int>::mul(a, b);
+      SparseMat<int> c = a * b;
       eq(c.get(0, 0), 6);
       eq(c.get(0, 1), 2);
       eq(c.get(0, 2), 8);
@@ -182,7 +182,7 @@ int main() {
       b.set(0, 0, 6);
       b.set(1, 1, 1);
       b.set(1, 2, 4);
-      Mat<int> c = Mat<int>::mul(a, b);
+      Mat<int> c = a * b;
       eq(c.get(0, 0), 6);
       eq(c.get(0, 1), 2);
       eq(c.get(0, 2), 8);
