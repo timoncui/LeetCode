@@ -199,6 +199,45 @@ public:
 };
 
 template<class T>
+class SparseMatCSR {
+public:
+  SparseMatCSR(const SparseMat<T>& m) {
+    v.resize(m.v.size());
+    col.resize(m.v.size());
+    cum_n.resize(1 + m.H());
+    if (v.size() == 0) return;
+
+    cum_n[0] = 0;
+    int i = 0;
+    for (int r = 0; r < H(); ++r) {
+      for (std::set<int>::iterator k = m.col_ids[r].begin(); k != m.col_ids[r].end(); ++k) {
+	v[i] = m.v.find(std::make_pair(r, *k))->second;
+	col[i] = *k;
+	i ++;
+      }
+      cum_n[r + 1] = i;
+    }
+  }
+  int H() const { return cum_n.size() - 1; }
+  std::vector<T> operator*(const std::vector<T>& x) const {
+    std::vector<T> y(H(), 0);
+    for (int i = 0; i < H(); ++i) {
+      for (int ind = cum_n[i]; ind < cum_n[i + 1]; ++ind) {
+	y[i] += x[col[ind]] * v[ind];
+      }
+    }
+    return y;
+  }
+  /* Example: For m = [0, 0, 1, 0; 2, 1, 0, 0; 0, 0, 1, 0],
+     v = [1 2 1 1]
+     col = [2 0 1 2]
+     cum_n = [0 1 3 4] */
+  std::vector<T> v;
+  std::vector<int> col;
+  std::vector<int> cum_n;
+};
+
+template<class T>
 class RingBuffer {
 public:
   RingBuffer(int N) : cur(0), size(0) { v.resize(N); } // N > 0

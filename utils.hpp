@@ -17,6 +17,8 @@
 #include "limits.h"
 
 #define ARRAYSIZE(x) (sizeof(x) / sizeof(x[0]))
+#define V(T, x) (std::vector<T>(x, x + ARRAYSIZE(x)))
+#define VI(x) (V(int, x))
 
 template<typename T> void print(T a) {
     std::cerr << a;

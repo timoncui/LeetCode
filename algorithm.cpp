@@ -231,4 +231,30 @@ int main() {
       eq(a.get(1, 2), 0.0f);
     }
   }
+  {
+    using jcui::algorithm::SparseMat;
+    using jcui::algorithm::SparseMatCSR;
+    {
+      // a = [1, 2, 1; 3, 3, 0]
+      SparseMat<int> a(2, 3);
+      a.set(0, 0, 1);
+      a.set(0, 1, 2);
+      a.set(0, 2, 1);
+      a.set(1, 0, 3);
+      a.set(1, 1, 3);
+      
+      SparseMatCSR<int> b(a);
+
+      int v[] = {1, 2, 1, 3, 3};
+      eq(b.v, VI(v));
+      int col[] = {0, 1, 2, 0, 1};
+      eq(b.col, VI(col));
+      int cum_n[] = {0, 3, 5};
+      eq(b.cum_n, VI(cum_n));
+
+      int c[] = {0, 5, 7};
+      int res[] = {17, 15};
+      eq(b * VI(c), VI(res));
+    }
+  }
 }
