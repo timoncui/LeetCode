@@ -257,4 +257,15 @@ int main() {
       eq(b * VI(c), VI(res));
     }
   }
+  {
+    using namespace jcui::algorithm;
+    {
+      vector<vector<int> > res = split_no_repeat(8, 7);
+      eq((int)res.size(), 5);
+    }
+    {
+      vector<vector<int> > res = split_no_repeat(10, 9);
+      eq((int)res.size(), 9);
+    }
+  }
 }

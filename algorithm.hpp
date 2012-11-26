@@ -261,5 +261,24 @@ private:
   std::vector<T> v;
 };
 
+// Split integer N using non-repeating numbers in [1, k]
+std::vector<std::vector<int> > split_no_repeat(int N, int k) {
+  std::vector<std::vector<int> > res;
+  if (N <= 0 || N > k * (k + 1) / 2) return res;
+
+  if (N == k) res.push_back(std::vector<int>(1, k));
+
+  std::vector<std::vector<int> > partial = split_no_repeat(N - k, k - 1);
+  for (int i = 0; i < partial.size(); ++i) {
+    partial[i].push_back(k);
+    res.push_back(partial[i]);
+  }
+  
+  std::vector<std::vector<int> > rest = split_no_repeat(N, k - 1);
+  res.insert(res.end(), rest.begin(), rest.end());
+
+  return res;
+}
+
 } // namespace algorithm
 } // namespace jcui
