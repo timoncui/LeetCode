@@ -25,7 +25,8 @@ M    1000
 
 Basic rules:
 
-1. Each digit in a number's Arabic numerals representation should be considered separately.
+1. Each digit in a number's Arabic numerals representation
+   should be considered separately.
 2. I, X, C, M can be repeated <= 3 times. D, L V can not be repeated.
 3. Only smaller value can be subtracted from larger values.
 4. I can be subtracted from V, X only. X can be subtracted from L and C only.
@@ -40,7 +41,15 @@ class Solution {
 public:
   string intToRoman(int num) {
     string c[] = {"IVX", "XLC", "CDM", "MYZ"};
-    int index[10][4] = {{-1}, {0, -1}, {0, 0, -1}, {0, 0, 0, -1}, {0, 1, -1}, {1, -1}, {1, 0, -1}, {1, 0, 0, -1}, {1, 0, 0, 0}, {0, 2, -1}};
+    int index[10][4] = {{-1}, {0, -1},
+                        {0, 0, -1},
+                        {0, 0, 0, -1},
+                        {0, 1, -1},
+                        {1, -1},
+                        {1, 0, -1},
+                        {1, 0, 0, -1},
+                        {1, 0, 0, 0},
+                        {0, 2, -1}};
     string s = "";
     int base = 1000, p = 3;
     while (p >= 0) {
@@ -59,6 +68,11 @@ public:
 
 int main() {
   Solution s;
-  int x[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 42, 92, 109, 388, 593, 999, 1020, 2012, 3999};
-  for (int i = 0; i < ARRAYSIZE(x); ++i) cout << "case " << i << ": " << x[i] << " = " << s.intToRoman(x[i]) << endl;
+  int x[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+             11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 42, 92,
+             109, 388, 593, 999, 1020, 2012, 3999};
+  for (int i = 0; i < ARRAYSIZE(x); ++i) {
+    cout << "case " << i << ": " << x[i] << " = "
+         << s.intToRoman(x[i]) << endl;
+  }
 }
