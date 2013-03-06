@@ -15,7 +15,9 @@ Given the below binary tree,
       / \
      2   3
 
-Difficulty rating:
+Return 1 + 2 + 3 = 6     
+     
+Difficulty rating: Medium
 
 Source:
 http://www.leetcode.com/onlinejudge
